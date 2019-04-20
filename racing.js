@@ -86,17 +86,20 @@ function Player() {
 	this.x = 0;
 	this.y = 390;
 	this.dx = 3;
-	this.width = 78;
+	this.width = 50;
 	this.height = 100;
 	this.draw = function() {
 		if (keys[68] || keys[39]) {
 			ctx.drawImage(images[1], this.x, this.y);
+			this.width = 78;
 		}
 		else if(keys[65] || keys[37]) {
 			ctx.drawImage(images[2], this.x, this.y);
+			this.width = 78;
 		}
 		else {
 			ctx.drawImage(images[0], this.x, this.y);
+			this.width = 50;
 		}
 	}
 	this.update = function() {
